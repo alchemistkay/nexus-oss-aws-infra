@@ -97,7 +97,7 @@ flowchart LR
   CW[(CloudWatch Logs/Metrics)]
   Lambda[SSL Expiry + Health Checks]
   Backup[AWS Backup]
-
+```
   Devs -->|HTTPS 443| Nginx
   Nginx <-->|DNS| Route53
   Certbot <-->|_acme‑challenge TXT| Route53
@@ -106,7 +106,7 @@ flowchart LR
   Lambda --> CW
   Lambda -->|SNS Alerts| Devs
   Backup -->|Daily Snapshots| Nexus
-```
+  
 ---
 
 ## Design Decisions (ADRs)
