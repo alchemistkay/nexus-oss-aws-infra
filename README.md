@@ -1,3 +1,5 @@
+![Platform Architecture Diagram](./docs/diagrams/nexus-architecture.svg)
+
 # Production‑Ready Nexus OSS on AWS (Zero‑Trust, S3/KMS, CI/CD)
 
 A End‑to‑end deployment of **Sonatype Nexus OSS** on **AWS**, secured with **Google SSO (OAuth2 Proxy)**, fronted by **NGINX** with TLS via **Let’s Encrypt (DNS‑01 / Route53)**, and storing artifacts on **S3 with KMS encryption**.  
@@ -74,8 +76,8 @@ Infrastructure is **Terraform**, host config is **Ansible**, CI/CD is **GitHub A
 │  │  ├─ incident_triage.md              # Incident response and troubleshooting
 │  │  └─ dev_onboarding.md               # Developer onboarding to Nexus
 │  └─ diagrams/                         # Architecture and flow diagrams
-│     ├─ nexus-architecture.png
-│     └─ nexus-architecture.drawio
+│     ├─ nexus-architecture.svg
+│    
 └─ app-samples/                         # Sample projects for testing Nexus
    ├─ maven/                            # Maven project sample
    └─ gradle/                           # Gradle project sample
