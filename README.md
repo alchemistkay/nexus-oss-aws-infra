@@ -84,33 +84,6 @@ Infrastructure is **Terraform**, host config is **Ansible**, CI/CD is **GitHub A
 ```
 ---
 
-```mermaid
-flowchart LR
-  Devs[Developers] -->|SSO| Google[Google IdP]
-
-  subgraph VPC [AWS VPC (private subnets)]
-    Nginx[NGINX TLS Termination] --> O2P[OAuth2 Proxy]
-    O2P -->|Headers: X-Forwarded-User/Groups| Nexus[Nexus OSS]
-    Nexus -->|Blob Store| S3[(S3 + KMS)]
-  end
-
-  Route53[(Route53 DNS)]
-  Certbot[Certbot DNS-01]
-  CW[(CloudWatch Logs/Metrics)]
-  Lambda[Lambda SSL Expiry + Health Checks]
-  Backup[AWS Backup]
-
-  %% External connections
-  Google --> Nginx
-  Route53 --> Certbot
-  Certbot --> Nginx
-  CW --> Nexus
-  Lambda --> CW
-  Backup --> S3
-```
-
----
-
 ## Design Decisions (ADRs)
 
 - ADR index: `docs/adr/README.md`
