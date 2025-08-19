@@ -1,4 +1,4 @@
-![Platform Architecture Diagram](./docs/diagrams/nexus-architecture.svg)
+![Platform Architecture Diagram](./docs/diagrams/nexus-architecture.png)
 
 # Production‑Ready Nexus OSS on AWS (Zero‑Trust, S3/KMS, CI/CD)
 
